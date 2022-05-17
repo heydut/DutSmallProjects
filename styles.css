@@ -1,0 +1,161 @@
+:root {
+  --bs-purple: #ae279d;
+  --bs-pink: #f51166;
+  --bs-orange: #f04c22;
+  --bs-yellowgold: #f18720;
+  --bs-yellowlemon: #f5b501;
+  --bs-yellowsun: #f5d016;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "League Spartan", sans-serif;
+}
+
+/* ----------- Nav Bar */
+
+.background {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: 0.75s;
+}
+
+.nav {
+  display: flex;
+  padding: 0px;
+  width: 100%;
+  margin: 0px auto auto auto;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  width: 100%;
+}
+
+li a {
+  padding: 30px;
+  float: left;
+  width: 100px;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+li i {
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: -20px;
+}
+
+li a .title {
+  font-size: 0px;
+}
+
+li a:hover .title {
+  transform: translateY(5px);
+  font-size: 12px;
+  transition: 0.5s;
+}
+
+li a.title:hover {
+  transform: translateY(-10px);
+}
+
+.nav li:first-child a {
+  background: var(--bs-purple) !important;
+  width: 100%;
+}
+.nav li:nth-child(2) a {
+  background: var(--bs-pink) !important;
+  width: 100%;
+}
+.nav li:nth-child(3) a {
+  background: var(--bs-orange) !important;
+  width: 100%;
+}
+.nav li:nth-child(4) a {
+  background: var(--bs-yellowgold) !important;
+  width: 100%;
+}
+.nav li:nth-child(5) a {
+  background: var(--bs-yellowlemon) !important;
+  width: 100%;
+}
+.nav li:nth-child(6) a {
+  background: var(--bs-yellowsun) !important;
+  width: 100%;
+}
+
+.nav li:first-child:hover ~ .background {
+  background: var(--bs-purple);
+}
+.nav li:nth-child(2):hover ~ .background {
+  background: var(--bs-pink);
+}
+.nav li:nth-child(3):hover ~ .background {
+  background: var(--bs-orange);
+}
+.nav li:nth-child(4):hover ~ .background {
+  background: var(--bs-yellowgold);
+}
+.nav li:nth-child(5):hover ~ .background {
+  background: var(--bs-yellowlemon);
+}
+.nav li:nth-child(6):hover ~ .background {
+  background: var(--bs-yellowsun);
+}
+
+@keyframes illuminate {
+  0% {
+    transform: scale(0.7, 0.7);
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+/* ----------- (End) Nav Bar */
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {
+  ...;
+} */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {
+  ...;
+} */
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {
+  ...;
+} */
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {
+  ...;
+} */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {
+  ...;
+} */
