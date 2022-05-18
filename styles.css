@@ -5,6 +5,7 @@
   --bs-yellowgold: #f18720;
   --bs-yellowlemon: #f5b501;
   --bs-yellowsun: #f5d016;
+  --bs-gray1: #222222;
 }
 
 body {
@@ -103,7 +104,30 @@ li a.title:hover {
   background: var(--bs-yellowsun) !important;
   width: 100%;
 }
-
+.nav li:nth-child(7) a {
+  background: var(--bs-purple) !important;
+  width: 100%;
+}
+.nav li:nth-child(8) a {
+  background: var(--bs-pink) !important;
+  width: 100%;
+}
+.nav li:nth-child(9) a {
+  background: var(--bs-orange) !important;
+  width: 100%;
+}
+.nav li:nth-child(10) a {
+  background: var(--bs-yellowgold) !important;
+  width: 100%;
+}
+.nav li:nth-child(11) a {
+  background: var(--bs-yellowlemon) !important;
+  width: 100%;
+}
+.nav li:nth-child(12) a {
+  background: var(--bs-yellowsun) !important;
+  width: 100%;
+}
 .nav li:first-child:hover ~ .background {
   background: var(--bs-purple);
 }
@@ -120,6 +144,24 @@ li a.title:hover {
   background: var(--bs-yellowlemon);
 }
 .nav li:nth-child(6):hover ~ .background {
+  background: var(--bs-yellowsun);
+}
+.nav li:nth-child(7):hover ~ .background {
+  background: var(--bs-purple);
+}
+.nav li:nth-child(8):hover ~ .background {
+  background: var(--bs-pink);
+}
+.nav li:nth-child(9):hover ~ .background {
+  background: var(--bs-orange);
+}
+.nav li:nth-child(10):hover ~ .background {
+  background: var(--bs-yellowgold);
+}
+.nav li:nth-child(11):hover ~ .background {
+  background: var(--bs-yellowlemon);
+}
+.nav li:nth-child(12):hover ~ .background {
   background: var(--bs-yellowsun);
 }
 
@@ -140,22 +182,22 @@ li a.title:hover {
 /* ----------- (End) Nav Bar */
 
 /* Extra small devices (phones, 600px and down) */
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   ...;
-} */
+}
 /* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
   ...;
-} */
+}
 /* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   ...;
-} */
+}
 /* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   ...;
-} */
+}
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   ...;
-} */
+}
