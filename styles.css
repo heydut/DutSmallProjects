@@ -205,29 +205,52 @@ header .header-space {
   padding: 5%;
 }
 
-.projects-icon {
-  color: #087f5b;
-  font-size: 1.2em;
-}
-
 .grid-smallprojects {
   column-gap: 3%;
   display: flex;
   justify-content: space-between;
-  /* display: grid;
-  grid-template-columns: repeat(4, 1fr); */
 }
 
-.projects-box {
+/* -------------------flip card----------------- */
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  height: 32vh;
+  width: 18vw;
+  border-radius: 12px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  height: 32vh;
+  width: 18vw;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+
   background-color: rgb(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.07);
   border-radius: 12px;
-  height: auto;
-  width: 18vw;
+  padding: 0 0 10px 0;
 }
 
-.projects-box img {
+.flip-card-front img {
   border-radius: 12px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -235,7 +258,22 @@ header .header-space {
   width: 18vw;
 }
 
-.pb-text {
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: rgb(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: rgb(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-front h3 {
   align-items: center;
   color: var(--gray1);
   display: flex;
@@ -246,14 +284,67 @@ header .header-space {
   gap: 5%;
 }
 
-.pb-text h3 {
-  color: var(--gray1);
+.flip-card-back h1,
+p {
+  margin: 10%;
 }
 
-.project-icons {
+.flip-card-button {
+  background-color: transparent;
+  border-radius: 100px;
+  border: 2px solid var(--gray1);
+  color: var(--gray3);
+  margin: 0 auto;
+  padding: 10px 0px;
+  transition: all 350ms ease-in;
+  width: 80%;
+}
+
+.flip-card-button a {
+  color: var(--gray1);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.flip-card-button:hover a {
+  background: linear-gradient(
+    -45deg,
+    #fd7a39,
+    #fe51b0,
+    #07bdff,
+    #00c69e,
+    #f5e45f,
+    #e2c1f3
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.flip-card-button:hover {
+  background-color: var(--gray1);
+  color: var(--gray7);
+}
+
+.flip-card-text {
+  align-items: center;
+  color: var(--gray1);
+  display: flex;
+  font-size: 1vw;
+  justify-content: center;
+  text-transform: uppercase;
+  margin: 2% 0;
+  gap: 5%;
+}
+
+.flip-card-icons {
   font-size: 1vw;
   margin-top: -2%;
 }
+
+/* -------------------flip card----------------- */
 
 /* ----------- (End) Small Projects */
 /* ----------- Footer */
